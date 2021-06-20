@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDesign</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar '
+            'left_contented contented contented right_contented'
+            'footer footer footer footer ';
+
+        }
+        body{
+            background-color: #99ABA1;
+        }
+        .item{
+            text-align: center;
+            /* border: 1px solid black; */
+            /* background-color: #99ABA1; */
+        }
+        #navbar{
+            grid-area: navbar;
+        }
+        #contented{
+            grid-area: contented;
+
+        }
+        #left_contented{
+            grid-area: left_contented;
+        }
+        #right_contented{
+            grid-area: right_contented;
+           
+        }
+        img{
+            margin: 2rem;
+            width: 37vw;
+           
+        }
+        #righted{
+            /* background-color: blue; */
+            margin: 5rem;
+
+        }
+        #h{
+            position: relative;
+            top: 2rem;
+            margin-bottom: 0;
+            font-size: 4rem;
+        }
+        #btn{
+        padding: .7rem 3rem;
+        cursor: pointer ;
+        background: none;
+        border: none;
+        border: 1px solid rgba(173, 84, 11, 0.904);
+     
+        }
+        #img_btn .bag{
+           /* background-color: blue; */
+           width: 10rem;
+           
+       
+        }
+        .dark-mode{
+            background-color: black;
+          color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+<header class="item" id="navbar">
+    <div class="nav">
+
+       home about service 
+    </div>
+</header>
+<main class="item" id="contented">
+    
+
+        <img src="./bag3.png" alt="" srcset="">
+
+
+</main>
+<aside class="item" id="right_contented">
+    <div id="righted">
+
+        <h1 id="h">H5</h1>
+        <p>CUBAN LUGGAGE</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, molestias sequi! Reprehenderit, cumque! Laboriosam accusamus, esse maiores provident molestias suscipit doloribus!</p>
+    </div>
+    <div id="bottom">
+       
+       <h1>$280.00</h1>
+<button id="btn" onclick="myfunction()">Dark Mode</button>
+    </div>
+</aside>
+<aside class="item" id="left_contented">
+<div id="img_btn">
+    <img src="./bag1.png" class="bag" alt="">
+    <img src="./bag2.png" class="bag" alt="" srcset="">
+</div>
+</aside>
+</div>
+<footer class="item"><p>copyright &copy; my website.com 2021-22</p>
+</footer>
+<script>
+    function myfunction() {
+        let element = document.body
+        element.classList.toggle('dark-mode')
+        let x = document.getElementById('btn')
+        if (x.innerHTML === 'Dark Mode') {
+            x.style.color='blue'
+            x.innerHTML='Light Mode'
+           
+        }
+        else{
+            x.innerHTML='Dark Mode'
+        }
+    }
+// function myfunction() {
+//     let element = document.body;
+//     element.classList.toggle('dark-mode')
+//  let x = document.getElementById('btn')
+//  if (x.innerHTML==='Dark Mode') {
+//      x.innerHTML='Light Mode'
+//      x.style.color='blue'
+//  }
+//  else{
+//      x.innerHTML='Dark Mode'
+//  }
+// }
+</script>
+</body>
+</html>
